@@ -1,43 +1,52 @@
-<html>
+<!DOCTYPE html>
+<html lang="pl">
   <head>
-    <title>
-      Zadanie4-Gorlikowski
-    </title>
+    <meta charset="UTF-8">
+    <title>Zadanie4-Gorlikowski</title>
   </head>
   <body>
     <script>
-      document.write("1)Kiedy powstał JavaScript (podaj datę).".fontsize(7).bold()+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;JavaScript powstał w 1995 roku".fontsize(7)+"<br>");
-      document.write("2)Dlaczego jest to język skryptowy?".fontsize(7).bold()+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;Ponieważ nie musi zostać skompilowany do kodu maszynowego".fontsize(7)+"<br>");
-      document.write("3)Gdzie jest wykonywany JS (klient lub serwer)".fontsize(7).bold()+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;Wykonywany jest u klienta w przeglądarce".fontsize(7)+"<br>");
-      document.write("4)Dlaczego jest JS to bezpieczne narzędzie?".fontsize(7).bold()+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;Ponieważ ma znacznie ograniczone uprawnienia dostępu do zasobów komputera".fontsize(7)+"<br>");
-      document.write("5)Czy jest to język obietkowy, jeśli tak to dlaczego?".fontsize(7).bold()+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;Ponieważ wykorzystuje definicje obiektów, metod, zdarzeń, które mogą być zastosowane do opisu właściwości obiektów.".fontsize(7)+"<br>");
-      document.write("6)Wymień zalety JS:".fontsize(7).bold()+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;Zaleta1-Prostota".fontsize(7)+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;Zaleta2-Miliony praktycznych przykładów".fontsize(7)+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;Zaleta3-Odciążenie serwerów".fontsize(7)+"<br>");
-      document.write("7)Framework to:".fontsize(7).bold()+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;Rodzaj programu do tworzenia innych programów  w JS".fontsize(7)+"<br>");
-      document.write("8)Do aplikacji mobilnych można użyć Framework".fontsize(7).bold()+"<br>");
-      document.write("&nbsp;&nbsp;&nbsp;TAK".fontsize(7)+"<br>");
-      document.write("9)Aplikacje responsywne to:".fontsize(7).bold()+"<br>");
-      document.write("10)&lsaquo;input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen(' ')"&rsaquo;".fontsize(7).blod()+"<br>");
-      document.write("&lsaquo;input type="button"&rsaquo;: Tworzy przycisk, który można kliknąć.<br> name="przycisk": Nadaje przyciskowi nazwę "przycisk".<br>value="Nowa Strona": Określa tekst widoczny na przycisku ("Nowa Strona").<br> onclick="WinOpen(' ')">: Kiedy użytkownik kliknie przycisk, zostanie wywołana funkcja WinOpen(' ').<br> Zazwyczaj ta funkcja otwiera nową stronę, ale w tym przypadku jej działanie zależy od tego, co zdefiniowano w funkcji WinOpen.".fontsize(7)+"<br>");
-    function okno_zamknij()  
-                       { 
-                             window.close() 
-                       } 
+      document.write("1) Kiedy powstał JavaScript (podaj datę).".fontsize(7).bold() + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;JavaScript powstał w 1995 roku".fontsize(7) + "<br>");
+      document.write("2) Dlaczego jest to język skryptowy?".fontsize(7).bold() + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;Ponieważ nie musi zostać skompilowany do kodu maszynowego".fontsize(7) + "<br>");
+      document.write("3) Gdzie jest wykonywany JS (klient lub serwer)?".fontsize(7).bold() + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;Wykonywany jest u klienta w przeglądarce".fontsize(7) + "<br>");
+      document.write("4) Dlaczego JS to bezpieczne narzędzie?".fontsize(7).bold() + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;Ponieważ ma znacznie ograniczone uprawnienia dostępu do zasobów komputera".fontsize(7) + "<br>");
+      document.write("5) Czy jest to język obiektowy, jeśli tak, to dlaczego?".fontsize(7).bold() + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;Tak, ponieważ wykorzystuje definicje obiektów, metod, zdarzeń, które mogą być zastosowane do opisu właściwości obiektów.".fontsize(7) + "<br>");
+      document.write("6) Wymień zalety JS:".fontsize(7).bold() + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;Zaleta 1 - Prostota".fontsize(7) + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;Zaleta 2 - Miliony praktycznych przykładów".fontsize(7) + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;Zaleta 3 - Odciążenie serwerów".fontsize(7) + "<br>");
+      document.write("7) Framework to:".fontsize(7).bold() + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;Rodzaj programu do tworzenia innych programów w JS".fontsize(7) + "<br>");
+      document.write("8) Do aplikacji mobilnych można użyć Framework?".fontsize(7).bold() + "<br>");
+      document.write("&nbsp;&nbsp;&nbsp;TAK".fontsize(7) + "<br>");
+      document.write("9) Aplikacje responsywne to:".fontsize(7).bold() + "<br>");
+      
+      // Poprawne wstawienie przycisku
+      document.write("10) <input type='button' name='przycisk' value='Nowa Strona' onclick='WinOpen()'>".fontsize(7).bold() + "<br>");
+      document.write("&lt;input type='button'&gt;: Tworzy przycisk, który można kliknąć.<br>");
+      document.write("name='przycisk': Nadaje przyciskowi nazwę 'przycisk'.<br>");
+      document.write("value='Nowa Strona': Określa tekst widoczny na przycisku ('Nowa Strona').<br>");
+      document.write("onclick='WinOpen()': Kiedy użytkownik kliknie przycisk, zostanie wywołana funkcja 'WinOpen'. Zwykle otwiera nową stronę.<br>");
+      
+      // Definicja funkcji otwierającej nowe okno
+      function WinOpen() {
+        window.open("https://example.com", "NowaStrona", "width=600,height=400");
+      }
+
+      // Definicja funkcji zamykającej okno
+      function okno_zamknij() {
+        window.close();
+      }
     </script>
-      <br>
-    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
-   
     
-    
-    
-    </script>
+    <!-- Przycisk do zamknięcia okna -->
+    <br>
+    <input type="button" value="Zamknij okno" onclick="okno_zamknij()">
   </body>
 </html>
+
