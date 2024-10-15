@@ -25,26 +25,15 @@
       document.write("8) Do aplikacji mobilnych można użyć Framework?".fontsize(7).bold() + "<br>");
       document.write("&nbsp;&nbsp;&nbsp;TAK".fontsize(7) + "<br>");
       document.write("9) Aplikacje responsywne to:".fontsize(7).bold() + "<br>");
+      document.write("10)&lsaquo;input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen(' ')"&rsaquo;".fontsize(7).blod()+"<br>");
+      document.write("&lsaquo;input type="button"&rsaquo;: Tworzy przycisk, który można kliknąć.<br> name="przycisk": Nadaje przyciskowi nazwę "przycisk".<br>value="Nowa Strona": Określa tekst widoczny na przycisku ("Nowa Strona").<br> onclick="WinOpen(' ')">: Kiedy użytkownik kliknie przycisk, zostanie wywołana funkcja WinOpen(' ').<br> Zazwyczaj ta funkcja otwiera nową stronę, ale w tym przypadku jej działanie zależy od tego, co zdefiniowano w funkcji WinOpen.".fontsize(7)+"<br>");
       
-      // Poprawne wstawienie przycisku
-      document.write("10) <input type='button' name='przycisk' value='Nowa Strona' onclick='WinOpen()'>".fontsize(7).bold() + "<br>");
-      document.write("&lt;input type='button'&gt;: Tworzy przycisk, który można kliknąć.<br>");
-      document.write("name='przycisk': Nadaje przyciskowi nazwę 'przycisk'.<br>");
-      document.write("value='Nowa Strona': Określa tekst widoczny na przycisku ('Nowa Strona').<br>");
-      document.write("onclick='WinOpen()': Kiedy użytkownik kliknie przycisk, zostanie wywołana funkcja 'WinOpen'. Zwykle otwiera nową stronę.<br>");
-      
-      // Definicja funkcji otwierającej nowe okno
-      function WinOpen() {
-        window.open("https://example.com", "NowaStrona", "width=600,height=400");
-      }
-
-      // Definicja funkcji zamykającej okno
       function okno_zamknij() {
         window.close();
       }
     </script>
     
-    <!-- Przycisk do zamknięcia okna -->
+    
     <br>
     <input type="button" value="Zamknij okno" onclick="okno_zamknij()">
   </body>
