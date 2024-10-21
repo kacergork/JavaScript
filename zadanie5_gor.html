@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie5_gorl</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: red;
+            font-size: 24px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+    <script language="JavaScript">
+        function WinOpen_grafika1() {
+            window.open("grafika1.html", "grafika1", "toolbar=no,directories=no,menubar=no,height=400,width=300,top=200,left=200");
+        }
+
+        function WinOpen_grafika2() {
+            window.open("grafika2.html", "grafika2", "toolbar=no,directories=no,menubar=no,height=400,width=300,top=200,left=550");
+        }
+
+        function WinOpen_grafika3() {
+            window.open("grafika3.html", "grafika3", "toolbar=no,directories=no,menubar=no,height=400,width=300,top=200,left=900");
+        }
+
+        function WinOpen_grafika4() {
+            window.open("grafika4.html", "grafika4", "toolbar=no,directories=no,menubar=no,height=400,width=300,top=200,left=1250");
+        }
+
+        function okno_zamknij() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h1>wykonał: Kacper Gorlikowski mój numer w dzienniku 7, czyli mam układ [(7) mod 4=3] układ 3</h1>
+    <form>
+        <input type="button" value="grafika1" onclick="WinOpen_grafika1()">
+        <input type="button" value="grafika2" onclick="WinOpen_grafika2()">
+        <input type="button" value="grafika3" onclick="WinOpen_grafika3()">
+        <input type="button" value="grafika4" onclick="WinOpen_grafika4()">
+        <br><br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+    </form>
+</body>
+</html>
+
