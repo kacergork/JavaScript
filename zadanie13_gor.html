@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Rozkład ułamka egipskiego - Gorlikowski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="font-size: 24px; color: green;">
+        <script>
+            
+            var m_gor = parseInt(prompt("Podaj wartość m (m > 0):"));
+
+            
+            if (m_gor > 0) {
+                
+                var ulamek1 = 1 / (m_gor + 1);
+                var ulamek2 = 1 / (m_gor * (m_gor + 1));
+
+                
+                document.write("Rozkład ułamka 1/" + m_gor + " na dwa ułamki egipskie:<br>");
+                document.write("1/" + m_gor + " = 1/" + (m_gor + 1) + " + 1/" + (m_gor * (m_gor + 1)) + "<br>");
+                document.write("Wartości ułamków: " + ulamek1.toFixed(5) + " + " + ulamek2.toFixed(5) + "<br>");
+            } else {
+                document.write("Podano nieprawidłową wartość m. Spróbuj ponownie.");
+            }
+        </script>
+    </div>
+</body>
+</html>
