@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>KOD 12 - Gorlikowski</title>
+  </head>
+  <body>
+    <textarea cols="80" rows="60" readonly>
+     <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Rozkład ułamka egipskiego na trzy ułamki</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="font-size: 24px; color: green;">
+        <script>
+          
+            var m_gor = parseInt(prompt("Podaj wartość m (m > 0):"));
+
+           
+            if (m_gor > 0) {
+                
+                var ulamek1 = 1 / (m_gor + 1);
+                var ulamek2 = 1 / (m_gor * (m_gor + 1));
+
+                
+                var m2 = m_gor * (m_gor + 1); 
+                var ulamek2_1 = 1 / (m2 + 1);
+                var ulamek2_2 = 1 / (m2 * (m2 + 1));
+
+               
+                document.write("Rozkład ułamka 1/" + m_gor + " na trzy ułamki egipskie:<br>");
+                document.write("1/" + m_gor + " = 1/" + (m_gor + 1) + " + 1/" + (m2 + 1) + " + 1/" + (m2 * (m2 + 1)) + "<br>");
+                
+            } else {
+                document.write("Podano nieprawidłową wartość m. Spróbuj ponownie.");
+            }
+        </script>
+    </div>
+</body>
+</html>
+    </textarea>
+  </body>
+</html>
