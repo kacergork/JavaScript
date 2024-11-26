@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>KOD 12 - Gorlikowski</title>
+  </head>
+  <body>
+    <textarea cols="80" rows="50" readonly>
+      <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 12-Gorlikowski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="output" style="color: green; font-size: 50px;"></div>
+
+    <script>
+        
+        var D1_gor = parseInt(prompt("Podaj numer pierwszego dnia (D1):"));
+        var G1_gor = parseInt(prompt("Podaj godzinę pierwszego dnia (G1):"));
+        var D2_gor = parseInt(prompt("Podaj numer drugiego dnia (D2):"));
+        var G2_gor = parseInt(prompt("Podaj godzinę drugiego dnia (G2):"));
+
+        
+        var godziny1 = D1_gor * 24 + G1_gor; 
+        var godziny2 = D2_gor * 24 + G2_gor; 
+        var sekundy = Math.abs(godziny1 - godziny2) * 3600; 
+
+        
+        var fontSize = 30 + new Date().getDate(); 
+        document.getElementById("output").style.fontSize = fontSize + "px";
+        document.getElementById("output").innerHTML = "Ilość sekund między dniami: " + sekundy + " sekund.";
+    </script>
+</body>
+</html>
+    </textarea>
+  </body>
+</html>
