@@ -8,10 +8,22 @@
  <script language="JavaScript">
        var a=parseFloat(prompt("a=",""));
        var b=parseFloat(prompt("b=",""));
-           function suma_kry(a, b) {
+           function suma_gor(a, b) {
              return a + b;
                  }
-       document.write("suma="+suma_kry(a,b)+"<br>");
+           function odejmowanie_gor(a, b) {
+             return a - b;
+                 }
+           function mnozenie_gor(a, b) {
+             return a * b;
+                 }
+           function od_kwadratu_gor(a, b) {
+             return a ^ b;
+                 }
+       document.write("suma="+suma_gor(a,b)+"<br>");
+       document.write("odejmowanie="+odejmowanie_gor(a,b)+"<br>");
+       document.write("mnożenie="+mnozenie_gor(a,b)+"<br>");
+       document.write("od kwadratu="+od_kwadratu_gor(a,b)+"<br>");
 </script>
 </div>
 </body>
