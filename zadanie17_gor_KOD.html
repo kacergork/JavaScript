@@ -4,3 +4,46 @@
   </head>
   <body>
     <textarea cols="100" rows="60" readonly>
+  <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie17-Gorlikowski</title>
+</head>
+<body>
+    <script>
+        document.write("<b><span style='font-size:20px;'>1) Wymień cztery sposoby wyprowadzania danych w JS</span></b><br>");
+        document.write("&nbsp;&nbsp;&nbsp;Z użyciem document.write(), z użyciem okienka alert(), do okienek formularza, do tabeli.<br>");
+
+        document.write("<b><span style='font-size:20px;'>2) Czym jest funkcja w JS, omów przy użyciu 4 podpunktów?</span></b><br>");
+        document.write("&nbsp;&nbsp;&nbsp;- Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy.<br>");
+        document.write("&nbsp;&nbsp;&nbsp;- Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod.<br>");
+        document.write("&nbsp;&nbsp;&nbsp;- Funkcja może mieć argumenty, które wchodzą do wnętrza funkcji i są tam przetwarzane, np. suma_kry(a, b).<br>");
+        document.write("&nbsp;&nbsp;&nbsp;- Może (nie zawsze) zwrócić obliczoną wartość zapisaną po słowie kluczowym return.<br>");
+
+        document.write("<b><span style='font-size:20px;'>3) Omów metody getElementsByName, getElementById, getElementsByTagName</span></b><br>");
+        document.write("&nbsp;&nbsp;&nbsp;- <b>getElementById(\"id\")</b> - dostęp do elementu o konkretnej wartości atrybutu id.<br>");
+        document.write("&nbsp;&nbsp;&nbsp;- <b>getElementsByTagName(\"znacznik\")</b> - dostęp do wszystkich elementów o typie znacznika, np. P lub DIV.<br>");
+        document.write("&nbsp;&nbsp;&nbsp;- <b>getElementsByName(\"nazwa\")</b> - dostęp do wszystkich elementów o konkretnej wartości atrybutu name.<br>");
+
+        document.write("<b><span style='font-size:20px;'>4) Omów właściwości innerHTML, innerText, className</span></b><br>");
+        document.write("&nbsp;&nbsp;&nbsp;- <b>innerHTML</b> - umożliwia odczyt, modyfikację lub usunięcie kodu HTML z danego elementu.<br>");
+        document.write("&nbsp;&nbsp;&nbsp;- <b>innerText</b> - umożliwia określenie ciągu znaków, który zostanie umieszczony w elemencie.<br>");
+        document.write("&nbsp;&nbsp;&nbsp;- <b>className</b> - umożliwia określenie klasy CSS użytej do prezentacji elementu.<br>");
+
+        function okno_zamknij() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.close();
+            }
+        }
+    </script>
+
+    <br>
+    <input type="button" value="Zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
+    </textarea>
+  </body>
+</html>
