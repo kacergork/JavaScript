@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>KOD 20 - Gorlikowski</title>
+  </head>
+  <body>
+    <textarea cols="130" rows="70" readonly>
+  <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Gorlikowski-Zadanie20</title>
+</head>
+<body>
+    <h2>Oblicz długości boków trójkąta</h2>
+    <form>
+        Punkt A: x = <input type="text" id="xa_gor"> y = <input type="text" id="ya_gor"><br>
+        Punkt B: x = <input type="text" id="xb_gor"> y = <input type="text" id="yb_gor"><br>
+        Punkt C: x = <input type="text" id="xc_gor"> y = <input type="text" id="yc_gor"><br>
+        <input type="button" value="Oblicz AB" onclick="AB_gor()">
+        <input type="button" value="Oblicz BC" onclick="BC_gor()">
+        <input type="button" value="Oblicz AC" onclick="AC_gor()">
+    </form>
+    <p id="wynik"></p>
+    <br>
+    
+    
+    <script>
+        function AB_gor() {
+            var xa = parseFloat(document.getElementById("xa_gor").value);
+            var ya = parseFloat(document.getElementById("ya_gor").value);
+            var xb = parseFloat(document.getElementById("xb_gor").value);
+            var yb = parseFloat(document.getElementById("yb_gor").value);
+            var ab = Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+            document.getElementById("wynik").innerHTML = "Długość AB: " + ab.toFixed(2);
+        }
+        
+        function BC_gor() {
+            var xb = parseFloat(document.getElementById("xb_gor").value);
+            var yb = parseFloat(document.getElementById("yb_gor").value);
+            var xc = parseFloat(document.getElementById("xc_gor").value);
+            var yc = parseFloat(document.getElementById("yc_gor").value);
+            var bc = Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+            document.getElementById("wynik").innerHTML = "Długość BC: " + bc.toFixed(2);
+        }
+        
+        function AC_gor() {
+            var xa = parseFloat(document.getElementById("xa_gor").value);
+            var ya = parseFloat(document.getElementById("ya_gor").value);
+            var xc = parseFloat(document.getElementById("xc_gor").value);
+            var yc = parseFloat(document.getElementById("yc_gor").value);
+            var ac = Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+            document.getElementById("wynik").innerHTML = "Długość AC: " + ac.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+    </textarea>
+  </body>
+</html>
