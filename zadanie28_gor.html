@@ -5,14 +5,14 @@
     <title>Zadanie28-Gorlikowski</title>
   </head>
   <body>
-    
-      <h3>Rodzaje "filozofii" programowania</h3>
+    <ol>
+      <li><h3>Rodzaje "filozofii" programowania</h3></li>
     <p>&nbsp&nbsp&nbsp&nbsp- Programowanie strukturalne</p>
     <p>&nbsp&nbsp&nbsp&nbsp- Programowanie obiektowe</p>
-      <h3>Opisz paradygmat programowania strukturalnego. Założenia programowania strukturalnego.</h3>
+      <li><h3>Opisz paradygmat programowania strukturalnego. Założenia programowania strukturalnego.</h3></li>
     <p>&nbsp&nbsp&nbsp&nbsp-<u><b>Programowanie strukturalne</b></u> - paradygmat programowania opierający się na podziale kodu 
 źródłowego programu na procedury i hierarchicznie ułożone bloki z wykorzystaniem struktur 
-kontrolnych w postaci instrukcji wyboru i pętli. Programowanie strukturalne zwiększa czytelność i ułatwia analizę programów, co stanowi znaczącą 
+kontrolnych w postaci instrukcji wyboru i pętli. <br>Programowanie strukturalne zwiększa czytelność i ułatwia analizę programów, co stanowi znaczącą 
 poprawę w stosunku do trudnego w utrzymaniu <b>„spaghetti code”</b> często wynikającego z użycia 
 <b>instrukcji goto.</b> </p><br>
     <p><b><u>Założenia programowania strukturalnego</u></b></p><br>
@@ -26,7 +26,7 @@ poprawę w stosunku do trudnego w utrzymaniu <b>„spaghetti code”</b> często
       <li> Unikanie instrukcji break, continua,</li>
       <li> W <u>programowaniu proceduralnym</u> (strukturalne) funkcje i zmienne opisujące dany przedmiot nie są ze sobą powiązane.</li>
     </ol>
-      <h3>Programowanie obiektowe: definicja (angielski skrót, obiekty, stan, zachowanie, końcowa konkluzja czym jest programowanie obiektowe).</h3>
+      <li><h3>Programowanie obiektowe: definicja (angielski skrót, obiekty, stan, zachowanie, końcowa konkluzja czym jest programowanie obiektowe).</h3></li>
     <p><b><u>Programowanie obiektowe definicja:</u></b></p><br>
     <p>Programowanie obiektowe (ang. object-oriented programming) — sposób programowania, w którym programy definiuje się za pomocą:</p>
     <ul>
@@ -35,9 +35,57 @@ poprawę w stosunku do trudnego w utrzymaniu <b>„spaghetti code”</b> często
       <li> obiekt wykazuje pewne <b>zachowanie</b> (czyli posiada pewne procedury w programowaniu obiektowym nazywane metody). Np. jest zdefiniowana metoda do zmiany wielkości okienka.</li>
     </ul>
     <p>Czyli <b>obiektowy program komputerowy</b> wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań.</p>
-      <h3>Dlaczego stosujemy programowanie obiektowe?</h3>
+      <li><h3>Dlaczego stosujemy programowanie obiektowe?</h3></li>
+      <ol>
+        <li>Jest to bardziej naturalne podejście przez programistę podczas tworzenia programów ponieważ <br>
+            otaczający nas świat to różnego rodzaju przedmioty. Tworząc program komputerowy dokonujemy <br>
+            pewnego ich odwzorowania rzeczywistości np. definiujemy obiekt samochód. Definiujemy pola <br>
+            czyli jego stan np. rok produkcji, marka, kolor. Definiujemy również metody czyli co umie np.<br>
+            hamowanie, przyśpieszanie. Definicja obiektu jego metod i pól znajduje się w klasie. Następnie na <br>
+            podstawie zdefiniowanego obiektu (może mieć pola oraz metody) powołujemy obiekt w pamięci <br>
+            wirtualnej </li>
+        <li>Programowanie obiektowe pozwala na lepsze gospodarowanie pamięciom komputera, ponieważ <br>
+gdy obiekt staje się zbędny możemy go usunąć co zwolni pamięć zajmowaną przez ten obiekt. W <br>
+programowaniu strukturalnym aby zwalniać pamięć konieczne było stosowanie dynamicznych <br>
+struktur danych np. stos czy kolejka.</li>
+      </ol>
+      <li><h3>Omów następujące pojęcia:</h3></li>
+      <ul>
+        <li><b>Klasa</b> (ang. "class") 
+    Klasa rodzaj foremki, która opisuje nam jak będą wyglądać tworzone na jej podstawie nowe <br>
+obiekty. Klasa jest to złożony typ będący opisem (definicją) obiektu/obiektów wraz z definicją pól i <br>
+metod obiektów. </li>
+        <li><b>Obiekt</b> (ang. "object") 
+    Instancja (byt, twór) który powstał na podstawie klasy.  Czyli Obiekty są konstrukcjami <br>
+programistycznymi mającymi tak zwane właściwości (inaczej pola obiektu), którymi mogą być <br>
+zmienne lub inne obiekty. Z obiektami powiązane są funkcje wykonujące operacje na ich <br>
+właściwościach, nazywane metodami.</li>
+        <li><b>Właściwość</b> (ang. "property") 
+    Własność obiektu, np. kolor. 
+        </li>
+        <li><b>Metoda</b> (ang. "method") 
+    Zdolność (czynność) którą umie wykonywać obiekt, np. chodzenie (idź). Realizowane w postaci 
+konstrukcji podobnej do funkcji.</li>
+        <li><b>Konstruktor</b> (ang. "constructor") 
+    Metoda wywoływana w momencie inicjalizacji obiektu. np. tworzymy obiekt a wraz z tworzeniem 
+obiektu uruchomi się metoda, która nada np. Imię i Nazwisko. </li>
+        <li><b>Destruktor<b> (ang. "descructor "jest wywoływany automatycznie podczas niszczenia obiektów. Nie <br>
+przyjmuje żadnych argumentów.  W przeciwieństwie do konstruktorów, w klasie może być tylko <br>
+jeden destruktor.</li>
+        <li><b>Dziedziczenie</b> (ang. "inheritance") 
+    Klasa może dziedziczyć własności od innej klasy. Tworzymy klasę na podstawie innej klasy <br>
+pobierając od „rodzica” właściwości i metody, może dopisać nowe pola i nowe metody. </li>
+          <li><b>Hermetyzacja</b> (lub enkapsulacja - ang. "encapsulation") 
+Wewnątrz ciała klasy znajdują się pola i metody. Część pól i metod można odpowiednio ukryć przed <br>
+"zewnętrznym światem" klasy tak jak to ma miejsce z przedmiotami ze świata rzeczywistego. </li>
+          <li><b>Polimorfizm</b> (ang. "polymorphism") 
+    Polimorfizm czyli wielopastaciowość. Oznacza to, że dany obiekt może zmieniać swoją postać w <br>
+zależności od potrzeb. Może to być realizowane w formie metody wywoływanej z różną ilością <br>
+parametrów. Tak więc utorzony obiekt może być traktowany polimorficznie bo zachowuje się różnie <br>
+w zależności od sposobu uruchamiania jego metody.</li>
+      </ul>
 
-    
+    </ol>
     <script>  
       function okno_zamknij() {
         window.close();
