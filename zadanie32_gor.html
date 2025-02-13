@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        
+        function Mebel(rodzaj, material, rodzajdrewna, kolor) {
+            this.rodzaj = rodzaj;
+            this.material = material;
+            this.rodzajdrewna = rodzajdrewna;
+            this.kolor = kolor;
+        }
+        
+        
+        Mebel.prototype.wypisz = function () {
+            alert('Rodzaj: ' + this.rodzaj + ', Materiał: ' + this.material + ', Rodzaj drewna: ' + this.rodzajdrewna + ', Kolor: ' + this.kolor);
+        };
+        
+        
+        var mebel1 = new Mebel('szafa', 'drewno', 'dąb', 'biały');
+        var mebel2 = new Mebel('stół', 'metal', 'brzoza', 'czarny');
+        var mebel3 = new Mebel('krzesło', 'plastik', 'n/d', 'czerwony');
+        
+        
+        Mebel.prototype.firma = "IKEA";
+        
+        
+        Mebel.prototype.mebel_pokaz_Gorlikowski = function () {
+            document.write('Mebel: ' + this.rodzaj + ', Firma: ' + this.firma + '<br>');
+        };
+        
+        function pokazWszystkie() {
+            mebel1.wypisz();
+            mebel2.wypisz();
+            mebel3.wypisz();
+        }
+        
+        function pokazNazwiska() {
+            mebel1.mebel_pokaz_Gorlikowski();
+            mebel2.mebel_pokaz_Gorlikowski();
+            mebel3.mebel_pokaz_Gorlikowski();
+        }
+    </script>
+</head>
+<body>
+    <h2>Programowanie obiektowe</h2>
+    <button onclick="pokazWszystkie()">Pokaż wszystkie meble</button>
+    <button onclick="pokazNazwiska()">Pokaż nazwy mebli i firmy</button>
+</body>
+</html>
