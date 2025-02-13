@@ -7,9 +7,96 @@
   <body>
     <ol>
       <li><h3>W jaki sposób można określić właściwość danego obiektu ( dwa sposoby wraz z przykładami)?</h3></li>
-      <img scr="image.png" alt="właściwości-obiektu">
+      <img scr="image.png" alt="właściwości-obiektu" width="30%" height="15%">
       <li><h3>W jaki sposób można odwołać się do pól (właściwości) i metod?</h3></li>
-      
+      <img scr="image2.png" alt="odwołanie" width="30%" height="15%">
+      <li><h3>Wymień cechy charakterystyczne konstruktora.</h3></li>
+      <p><u><b>Cechy charakterystyczne konstruktora:</b></u></p>
+      <ul>
+        <li>jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu, </li>
+        <li>nazywa się tak samo jak klasa,</li>
+        <li>nie zwraca żadnej wartości ,</li>
+        <li>może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do 
+życia obiekt za pomocą operatora new.</li>
+      </ul>
+      <li><h3>Konstruowanie obiektu na podstawie przykładuobiekt ma trzy pola oraz jedną metodę.</h3></li>
+      <textarea cols="50" rows="30" readonly>
+        var osoba_1 = 
+        { 
+        nazwisko : ‘Kowalski’, 
+        imie  :’Jan’, 
+        zawod  :’piekarz’, 
+        wyświetl :function  () 
+       { 
+        Document.write(this.nazwisko + ‘  ‘  +  this.imie) 
+       } 
+        }  
+ 
+        Uwaga1: 
+        Słowo kluczowe this  pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu. 
+        Uwaga2: 
+        Metody i pola muszą być odzielne przecinkami w obrębie jednego obiektu.
+      </textarea>
+      <li><h3>Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h3></li>
+      <p> - Użyte słowo kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do odpowiedniego pola tego obiektu.</p>
+      <li><h3>Konstruktor w JS na podstawie przykładu wraz z opisem.</h3></li>
+      <textarea cols="50" rows="30" readonly>
+        Zostanie utworzony konstruktor o nazwie klient z właściwościami nazwisko, imie, zawod oraz 
+        metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów. Użyte słowo 
+        kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do 
+        odpowiedniego pola tego obiektu. 
+ 
+        function klient(nazwisko_k,imie_k,zawod_k) 
+        { 
+         this.nazwisko=nazwisko_k; 
+         this.imie=imie_k; 
+         this.zawod=zawod_k; 
+  
+          wypisz = function () 
+        { 
+          alert(this.nazwisko + ' ' + this.imie) 
+        } 
+        }
+      </textarea>
+      <li><h3>Znaczenie słowa kluczowego New  wraz z przykładem.</h3></li>
+      <textarea cols="40" rows="15" readonly>
+        Słowo kluczowe new 
+        Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe new. 
+ 
+        Przykład 
+        var osoba1 = new klient('Kowalski', 'Jan', 'kierowca'); 
+        var osoba2 = new klient('Nowak', 'Anna', 'sekretarka'); 
+ 
+        Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient. 
+      </textarea>
+      <li><h3>Znaczenie słowa kluczowego prototype  wraz z przykładem i opisem</h3></li>
+       <textarea cols="50" rows="50" readonly>
+         Właściwość prototype 
+ 
+          Do definowania  metod  i  właściwości  dla  obiektu  jest  wykorzystana  właściwości prototype. 
+ 
+          Przykład 
+ 
+          function klient() 
+          { 
+          this.nazwisko='Bielski'; 
+          this.imie='Paweł'; 
+           } 
+          klient.prototype.pisz_dane = function () 
+          { 
+           document.write(this.nazwisko + ' ' + this.imie) 
+          } 
+          klient.prototype.zawod = 'kierowca'; 
+          var osoba1 = new klient(); 
+          osoba1.pisz_dane();
+       </textarea>
+      <p><u>Opis przykładu powyżej:</u></p>
+      <p>W definicji konstruktora nie zostały zadeklarowane żadne metody i właściwości. Dopiero po użyciu <br>
+        właściwości prototype została dodana metoda pisz_dane oraz właściwość zawod. Od tej pory każdy <br>
+        nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość i <br>
+        metodę. </p>
+      <p><b>Właściwość prototype może być również wykorzystana do dodawania dodatkowych <br>
+          metod lub właściwości do istniejących obiektów.</b></p>
     </ol>
       <script>
       function okno_zamknij() {
