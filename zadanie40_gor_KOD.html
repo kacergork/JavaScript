@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>KOD 36 - Gorlikowski</title>
+  </head>
+  <body>
+    <textarea cols="120" rows="60" readonly>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 40 – Gorlikowski</title>
+</head>
+<body>
+  <h2>Proste Obliczenia</h2><br>
+  <br>
+  <h2>Gorlikowski 3G</h2>
+  <p>Podaj dwie liczby:</p>
+  <input type="text" id="a_gor" placeholder="Liczba A">
+  <input type="text" id="b_gor" placeholder="Liczba B"><br><br>
+  <button onclick="suma_gor()">DODAWANIE</button>
+  <button onclick="roznica_gor()">ODEJMOWANIE</button>
+  <button onclick="iloczyn_gor()">MNOŻENIE</button>
+  <button onclick="iloraz_gor()">DZIELENIE</button>
+
+  <div id="wynik" style="margin-top:20px; font-size: 20px; color: darkgreen;"></div>
+
+  <script>
+    function getInput() {
+      let a = document.getElementById("a_gor").value;
+      let b = document.getElementById("b_gor").value;
+      return [a, b];
+    }
+
+    function walidacja_gor(a, b, dzielenie = false) {
+      if (a === "" || b === "") {
+        return "Proszę uzupełnić obie liczby.";
+      }
+      if (dzielenie && parseFloat(b) === 0) {
+        return "Nie wolno dzielić przez zero.";
+      }
+      return null;
+    }
+
+    function suma_gor() {
+      let [a, b] = getInput();
+      let err = walidacja_gor(a, b);
+      if (err) return pokazBlad(err);
+      let wynik = parseFloat(a) + parseFloat(b);
+      pokazWynik(wynik);
+    }
+
+    function roznica_gor() {
+      let [a, b] = getInput();
+      let err = walidacja_gor(a, b);
+      if (err) return pokazBlad(err);
+      let wynik = parseFloat(a) - parseFloat(b);
+      pokazWynik(wynik);
+    }
+
+    function iloczyn_gor() {
+      let [a, b] = getInput();
+      let err = walidacja_gor(a, b);
+      if (err) return pokazBlad(err);
+      let wynik = parseFloat(a) * parseFloat(b);
+      pokazWynik(wynik);
+    }
+
+    function iloraz_gor() {
+      let [a, b] = getInput();
+      let err = walidacja_gor(a, b, true);
+      if (err) return pokazBlad(err);
+      let wynik = parseFloat(a) / parseFloat(b);
+      pokazWynik(wynik);
+    }
+
+    function pokazBlad(tekst) {
+      document.getElementById("wynik").innerHTML = `<span style="color:red;">${tekst}</span>`;
+    }
+
+    function pokazWynik(wynik) {
+      document.getElementById("wynik").innerHTML = `Wynik działania wynosi: ${wynik.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
+      </textarea>
+  </body>
+</html>
