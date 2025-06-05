@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>KOD - 44</title>
+  </head>
+  <body>
+    <textarea cols="100" rows="100" readonly>
+      
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 44 – Gorlikowski</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .tekst {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Zadanie 44 – Gorlikowksi</h2>
+  <button onclick="wyswietlImieNazwisko()">Gorlikowski-Zadanie44</button>
+
+  <div id="wynik"></div>
+
+  <script>
+    function wyswietlImieNazwisko() {
+      const imie = "Kacper";
+      const nazwisko = "Gorlikowski";
+
+      const liczba_liter_nazwiska = nazwisko.length; 
+      const ile_razy_wyswietlic = (liczba_liter_nazwiska % 4) + 10; 
+      const wielkosc_liter = (liczba_liter_nazwiska % 3) + 40; 
+
+      s
+      let i_g = 0;
+      let koniec_petli_gor = ile_razy_wyswietlic;
+
+      let wynikHTML = `<p> Ilość powtórzeń: <strong>${ile_razy_wyswietlic}</strong>, wielkość liter: <strong>${wielkosc_liter}px</strong></p>`;
+
+      for (i_g = 1; i_g <= koniec_petli_gor; i_g++) {
+        if (i_g % 2 === 0) {
+          wynikHTML += `<p class="tekst" style="font-size:${wielkosc_liter}px;">${imie}</p>`;
+        } else {
+          wynikHTML += `<p class="tekst" style="font-size:${wielkosc_liter}px;">${nazwisko}</p>`;
+        }
+      }
+
+      document.getElementById("wynik").innerHTML = wynikHTML;
+    }
+  </script>
+
+</body>
+</html>
+
+    </textarea>
+  </body>
+</html>
