@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 41 – Teoria pętli</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .petla {
+      background-color: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 5px solid #007bff;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Zadanie 41 – Teoria pętli</h1>
+
+  <button onclick="alert('Strona zaliczeniowa uruchomiona!')">Nazwisko_ucznia-Zadanie41</button>
+
+  <div class="petla">
+    <h2>Pętla for</h2>
+    <p><strong>Konstrukcja:</strong></p>
+    <pre>for (let i = 0; i < 5; i++) {
+  // instrukcje
+}</pre>
+    <p><strong>Opis:</strong> Pętla „for” wykonuje blok kodu określoną liczbę razy, znaną z góry.</p>
+    <p><strong>Schemat blokowy:</strong></p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/For-loop-diagram.svg/600px-For-loop-diagram.svg.png" alt="Schemat pętli for">
+  </div>
+
+  <div class="petla">
+    <h2>Pętla while (kontrolowane wejście)</h2>
+    <p><strong>Konstrukcja:</strong></p>
+    <pre>while (warunek) {
+  // instrukcje
+}</pre>
+    <p><strong>Opis:</strong> Pętla „while” wykonuje blok kodu dopóki warunek jest spełniony. Sprawdzenie warunku następuje przed wejściem do pętli.</p>
+    <p><strong>Schemat blokowy:</strong></p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/While-loop-diagram.svg/600px-While-loop-diagram.svg.png" alt="Schemat pętli while">
+  </div>
+
+  <div class="petla">
+    <h2>Pętla do...while (kontrolowane wyjście)</h2>
+    <p><strong>Konstrukcja:</strong></p>
+    <pre>do {
+  // instrukcje
+} while (warunek);</pre>
+    <p><strong>Opis:</strong> Pętla „do while” zawsze wykona blok kodu przynajmniej raz, ponieważ warunek sprawdzany jest na końcu.</p>
+    <p><strong>Schemat blokowy:</strong></p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Do-while-loop-diagram.svg/600px-Do-while-loop-diagram.svg.png" alt="Schemat pętli do while">
+  </div>
+
+</body>
+</html>
