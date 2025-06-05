@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 43 – Liczby parzyste</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f8f8;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 10px 0;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #wynik {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Zadanie 43 – Liczby parzyste od 2 do podanej liczby</h1>
+
+  <button onclick="alert('Zadanie 43 aktywowane')">Gorlikowski-Zadanie43</button><br>
+  <button onclick="wypiszParzyste()">Gorlikowski-Zadanie43-KOD</button>
+
+  <div id="wynik"></div>
+
+  <script>
+    function wypiszParzyste() {
+      
+      let koniec_petli_gor = parseInt(prompt("Podaj liczbę końcową (minimum 2):"), 10);
+
+      
+      if (isNaN(koniec_petli_gor) || koniec_petli_gor < 2) {
+        document.getElementById("wynik").innerText = "Wprowadź poprawną liczbę (większą lub równą 2).";
+        return;
+      }
+
+      let wynik = "Liczby parzyste od 2 do " + koniec_petli_gor + ":\n";
+
+      for (let i_g = 2; i_g <= koniec_petli_kow; i_g++) {
+        if (i_g % 2 === 0) {
+          wynik += i_g + " ";
+        }
+      }
+
+      document.getElementById("wynik").innerText = wynik;
+    }
+  </script>
+
+</body>
+</html>
