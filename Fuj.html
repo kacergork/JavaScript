@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 52 - Narożnik</title>
+</head>
+<body>
+    <pre id="output"></pre>
+
+    <script>
+        let imie = prompt("Podaj swoje imię:");
+        let nazwisko = prompt("Podaj swoje nazwisko:");
+
+        let dl_nazwiska = nazwisko.replace(/\s/g, "").length;
+
+        let a_kow = (dl_nazwiska % 4) + 5; // wysokość
+        let b_kow = dl_nazwiska;          // szerokość
+
+        let wynik = "";
+
+        // Rysujemy poziomą linię gwiazdek (górna krawędź)
+        for (let i = 0; i < b_kow; i++) {
+            wynik += "*";
+        }
+        wynik += "\n";
+
+        // Rysujemy pionową krawędź (lewa strona)
+        for (let i = 1; i < a_kow; i++) {
+            wynik += "*\n";
+        }
+
+        document.getElementById("output").textContent = wynik;
+    </script>
+</body>
+</html>
