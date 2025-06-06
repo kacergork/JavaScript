@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 52 – Rysowanie prostokąta</title>
+    <style>
+        pre {
+            font-family: monospace;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Zadanie 52 – Rysowanie prostokąta z gwiazdek</h2>
+    <pre id="prostokat"></pre>
+
+    <script>
+  
+
+        let a_gor = (8 % 4) + 5;   
+        let b_gor = (3 % 6) + 20;   
+
+        let rysunek = "";
+
+        for (let i = 0; i < b_gor; i++) {
+            rysunek += "*";
+        }
+        rysunek += "\n";
+
+        for (let i = 0; i < a_gor - 2; i++) {
+            rysunek += "*";
+            for (let j = 0; j < b_gor - 2; j++) {
+                rysunek += " ";
+            }
+            rysunek += "*\n";
+        }
+
+        for (let i = 0; i < b_gor; i++) {
+            rysunek += "*";
+        }
+
+        document.getElementById("prostokat").innerText = rysunek;
+    </script>
+</body>
+</html>
