@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 57 – Pierwiastki liczb</title>
+    <style>
+        pre {
+            font-family: monospace;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <h2>Zadanie 57 – Liczby, pierwiastek 2 i 4 stopnia</h2>
+    <pre id="output"></pre>
+
+    <script>
+     
+        let numer = parseInt(prompt("Podaj swój numer w dzienniku:"));
+
+       
+        if (isNaN(numer) || numer < 1) {
+            alert("Niepoprawny numer!");
+        } else {
+            let wynik = "";
+            let licznik = 0;
+
+            for (let i = numer; i <= numer + 15; i++) {
+                let pierw_2 = Math.sqrt(i);
+                let pierw_4 = Math.sqrt(pierw_2); 
+
+                wynik += `l = ${i}   pierw_2(${i}) = ${pierw_2.toFixed(2)}   pierw_4(${i}) = ${pierw_4.toFixed(2)}\n`;
+
+                licznik++;
+
+                if (licznik % 3 === 0 && i < numer + 15) {
+                    document.getElementById("output").innerText = wynik;
+                    alert("Naciśnij OK, aby kontynuować...");
+                }
+            }
+
+           
+            document.getElementById("output").innerText = wynik;
+        }
+    </script>
+</body>
+</html>
