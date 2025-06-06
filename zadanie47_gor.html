@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 47 – Sprawdzanie trójkąta (do...while)</title>
+</head>
+<body>
+    <h2>Zadanie 47 – Sprawdzanie czy boki tworzą trójkąt</h2>
+    <button onclick="sprawdzTrojkat()">Sprawdź trójkąt</button>
+    <p id="wynik"></p>
+
+    <script>
+        function sprawdzTrojkat() {
+            let a_gor, b_gor, c_gor;
+            do {
+                a_gor = parseFloat(prompt("Podaj bok a:"));
+                b_gor = parseFloat(prompt("Podaj bok b:"));
+                c_gor = parseFloat(prompt("Podaj bok c:"));
+            } while (
+                isNaN(a_gor) || isNaN(b_gor) || isNaN(c_gor) ||
+                a_gor <= 0 || b_gor <= 0 || c_gor <= 0 ||
+                (a_gor + b_gor <= c_gor) ||
+                (a_gor + c_gor <= b_gor) ||
+                (b_gor + c_gor <= a_gor)
+            );
+
+            document.getElementById("wynik").innerText =
+                `Boki (${a_gor}, ${b_gor}, ${c_gor}) tworzą poprawny trójkąt.`;
+        }
+    </script>
+</body>
+</html>
