@@ -15,10 +15,17 @@
     <pre id="prostokat"></pre>
 
     <script>
-  
+    
+        let imie = prompt("Podaj swoje imię:");
+        let nazwisko = prompt("Podaj swoje nazwisko:");
 
-        let a_gor = (8 % 4) + 5;   
-        let b_gor = (3 % 6) + 20;   
+ 
+        imie = imie.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        nazwisko = nazwisko.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+
+        let a_gor = (nazwisko.length % 4) + 5;  
+        let b_gor = (imie.length % 6) + 20;     
 
         let rysunek = "";
 
@@ -35,9 +42,13 @@
             rysunek += "*\n";
         }
 
-        for (let i = 0; i < b_gor; i++) {
-            rysunek += "*";
+
+        if (a_gor > 1) {
+            for (let i = 0; i < b_gor; i++) {
+                rysunek += "*";
+            }
         }
+
 
         document.getElementById("prostokat").innerText = rysunek;
     </script>
